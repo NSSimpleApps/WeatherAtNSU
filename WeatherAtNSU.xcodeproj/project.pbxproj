@@ -28,6 +28,8 @@
 		CE6F397F2678E24E00F32C4D /* WeatherContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherContentView.swift; sourceTree = "<group>"; };
 		CE6F39812678E2BF00F32C4D /* WeatherLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLoader.swift; sourceTree = "<group>"; };
 		CE6F39852679168B00F32C4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEF7EB302679C3B30041F2AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CEF7EB312679C3C90041F2AB /* weather_at_nsu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_at_nsu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,8 @@
 		CE6F395F2678E12D00F32C4D = {
 			isa = PBXGroup;
 			children = (
+				CEF7EB302679C3B30041F2AB /* README.md */,
+				CEF7EB312679C3C90041F2AB /* weather_at_nsu.png */,
 				CE6F396A2678E12D00F32C4D /* WeatherAtNSU */,
 				CE6F39692678E12D00F32C4D /* Products */,
 			);
