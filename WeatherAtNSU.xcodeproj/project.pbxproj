@@ -14,7 +14,6 @@
 		CE28A9F0267A3AA900E17C83 /* WeatherAtNSUExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CE28A9EC267A3AA800E17C83 /* WeatherAtNSUExtension.intentdefinition */; };
 		CE28A9F1267A3AA900E17C83 /* WeatherAtNSUExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CE28A9EC267A3AA800E17C83 /* WeatherAtNSUExtension.intentdefinition */; };
 		CE28A9F4267A3AA900E17C83 /* WeatherAtNSUExtensionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE28A9E3267A3AA800E17C83 /* WeatherAtNSUExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CE28A9F9267A453C00E17C83 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F39852679168B00F32C4D /* Constants.swift */; };
 		CE28A9FA267A454000E17C83 /* WeatherLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F39812678E2BF00F32C4D /* WeatherLoader.swift */; };
 		CE6F396C2678E12D00F32C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F396B2678E12D00F32C4D /* AppDelegate.swift */; };
 		CE6F396E2678E12D00F32C4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F396D2678E12D00F32C4D /* SceneDelegate.swift */; };
@@ -252,7 +251,6 @@
 				CE28A9EB267A3AA800E17C83 /* WeatherAtNSUExtension.swift in Sources */,
 				CE28A9FA267A454000E17C83 /* WeatherLoader.swift in Sources */,
 				CE28A9F0267A3AA900E17C83 /* WeatherAtNSUExtension.intentdefinition in Sources */,
-				CE28A9F9267A453C00E17C83 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
