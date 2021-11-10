@@ -68,9 +68,7 @@ struct WeatherContentView: View {
     
     private func updateWeather() {
         self.weatherLoader.loadData(completion: { weather in
-            DispatchQueue.main.async {
-                self.weather = weather
-            }
+            self.weather = weather
         })
     }
 }
