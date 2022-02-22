@@ -9,14 +9,28 @@ import UIKit
 
 
 class WeatherViewController: UIViewController {
-    let weatherLoader = WeatherLoader()
+    init(weatherLoader: WeatherLoader, location: String, image: String) {
+        self.weatherLoader = weatherLoader
+        self.location = location
+        self.image = image
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    let weatherLoader: WeatherLoader
+    let location: String
+    let image: String
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
         
-        let imageView = UIImageView(image: UIImage(named: Constants.nsuImageName))
+        let imageView = UIImageView(image: UIImage(named: self.image))
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(imageView)
@@ -41,18 +55,18 @@ class WeatherViewController: UIViewController {
         }
         weatherAtLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
-        let nsuLabel = UILabel()
-        nsuLabel.font = UIFont.systemFont(ofSize: 60, weight: .bold)
-        nsuLabel.text = Constants.nsuLabel
-        nsuLabel.textColor = textColor
-        nsuLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(nsuLabel)
-        nsuLabel.topAnchor.constraint(equalTo: weatherAtLabel.bottomAnchor).isActive = true
-        nsuLabel.centerXAnchor.constraint(equalTo: weatherAtLabel.centerXAnchor).isActive = true
+        let locationLabel = UILabel()
+        locationLabel.font = UIFont.systemFont(ofSize: 60, weight: .bold)
+        locationLabel.text = self.location
+        locationLabel.textColor = textColor
+        locationLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(locationLabel)
+        locationLabel.topAnchor.constraint(equalTo: weatherAtLabel.bottomAnchor).isActive = true
+        locationLabel.centerXAnchor.constraint(equalTo: weatherAtLabel.centerXAnchor).isActive = true
         
         let temperatureLabel = UILabel()
         temperatureLabel.tag = self.temperatureLabelTag
-        temperatureLabel.font = nsuLabel.font
+        temperatureLabel.font = locationLabel.font
         temperatureLabel.textColor = textColor
         temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(temperatureLabel)

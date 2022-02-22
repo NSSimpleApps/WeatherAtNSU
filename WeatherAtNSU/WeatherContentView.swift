@@ -9,7 +9,15 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 struct WeatherContentView: View {
-    let weatherLoader = WeatherLoader()
+    init(weatherLoader: WeatherLoader, location: String, image: String) {
+        self.weatherLoader = weatherLoader
+        self.location = location
+        self.image = image
+    }
+    
+    let weatherLoader: WeatherLoader
+    let location: String
+    let image: String
     
     @State var weather = ""
     @State var linkButtonDisabled = false
@@ -17,7 +25,11 @@ struct WeatherContentView: View {
     
     var body: some View {
         ZStack {
-            Image(Constants.nsuImageName).resizable().aspectRatio(contentMode: .fill)//.edgesIgnoringSafeArea(.all)
+            Image(self.image)
+            .resizable()
+            .scaledToFill()
+            .frame(height: UIScreen.main.bounds.height)
+            .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Spacer().frame(height: Constants.weatherAtLabelInset)
@@ -26,7 +38,7 @@ struct WeatherContentView: View {
                 let textColor = Color.white
                 
                 Text(Constants.weatherAtLabel).foregroundColor(textColor).font(.system(size: 14, weight: .semibold))
-                Text(Constants.nsuLabel).foregroundColor(textColor).font(bigFont)
+                Text(self.location).foregroundColor(textColor).font(bigFont)
                 
                 Spacer()
                 
@@ -61,7 +73,9 @@ struct WeatherContentView: View {
                 
                 Spacer().frame(height: Constants.linksViewBottomInset)
             }
-        }.edgesIgnoringSafeArea(.all).onAppear(perform: {
+        }
+        .edgesIgnoringSafeArea(.all)
+        .onAppear(perform: {
             self.updateWeather()
         })
     }

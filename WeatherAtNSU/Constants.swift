@@ -14,9 +14,13 @@ struct Constants {
     static var weatherAtLabelInset: CGFloat { return 44 }
     
     static var nsuImageName: String { return "nsu" }
+    static var inpImageName: String { return "inp" }
     
     static var weatherAtLabel: String { return "ТЕМПЕРАТУРА ОКОЛО" }
+    
+    
     static var nsuLabel: String { return "НГУ" }
+    static var inpLabel: String { return "ИЯФ" }
     
     static var linksViewBottomInset: CGFloat { return 16 }
     

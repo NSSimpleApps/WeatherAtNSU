@@ -11,7 +11,7 @@ import Intents
 
 
 struct Provider: TimelineProvider {
-    private let weatherLoader = WeatherLoader()
+    private let weatherLoader = WeatherLoader.nsu
     
     typealias Entry = WeatherEntry
     

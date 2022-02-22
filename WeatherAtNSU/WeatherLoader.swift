@@ -8,14 +8,28 @@
 import Foundation
 
 
-class WeatherLoader {
+final class WeatherLoader {
+    let url: URL
+    let pattern: String
+    init(url: URL, pattern: String) {
+        self.url = url
+        self.pattern = pattern
+    }
+    
+    static var nsu: Self {
+        return Self(url: URL(string: "http://weather.nsu.ru/loadata.php")!, pattern: #"innerHTML\s+=\s+'(-?\d+)\.?(\d+)?"#)
+    }
+    static var inp: Self {
+        return Self(url: URL(string: "http://thermo.inp.nsk.su")!, pattern: #"(-?\d+)\.?(\d+)? °C"#)
+    }
+    
     func loadData(completion: @escaping (String) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://weather.nsu.ru/loadata.php")!,
+        let pattern = self.pattern
+        URLSession.shared.dataTask(with: self.url,
                                    completionHandler: { data, response, error in
                                     if let data = data, let string = String(data: data, encoding: .utf8) {
                                         do {
                                             let nsString = string as NSString
-                                            let pattern = #"innerHTML\s+=\s+'(-?\d+)\.?(\d+)?"#
                                             let reg = try NSRegularExpression(pattern: pattern, options: [])
                                             if let match = reg.firstMatch(in: string, options: [], range: NSRange(location: 0, length: nsString.length)) {
                                                 let numberOfRanges = match.numberOfRanges
