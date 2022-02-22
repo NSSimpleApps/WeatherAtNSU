@@ -29,10 +29,10 @@ struct WeatherContentView: View {
             .resizable()
             .scaledToFill()
             .frame(height: UIScreen.main.bounds.height)
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.top)
             
             VStack {
-                Spacer().frame(height: Constants.weatherAtLabelInset)
+                Spacer(minLength: Constants.weatherAtLabelInset)
                 
                 let bigFont = Font.system(size: 60, weight: .semibold)
                 let textColor = Color.white
@@ -71,10 +71,9 @@ struct WeatherContentView: View {
                     }).font(smallFont).disabled(self.linkButtonDisabled)
                 })
                 
-                Spacer().frame(height: Constants.linksViewBottomInset)
+                Spacer().frame(height: Constants.linksViewBottomInset + 50)
             }
         }
-        .edgesIgnoringSafeArea(.all)
         .onAppear(perform: {
             self.updateWeather()
         })
