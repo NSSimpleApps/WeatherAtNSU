@@ -9,13 +9,13 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 struct WeatherContentView: View {
-    init(weatherLoader: WeatherLoader, location: String, image: String) {
+    init(weatherLoader: AsyncWeatherLoader, location: String, image: String) {
         self.weatherLoader = weatherLoader
         self.location = location
         self.image = image
     }
     
-    let weatherLoader: WeatherLoader
+    let weatherLoader: AsyncWeatherLoader
     let location: String
     let image: String
     
@@ -49,7 +49,14 @@ struct WeatherContentView: View {
                 let updateWeatherButtonSize = Constants.updateWeatherButtonSize
                 Button(action: {
                     self.degrees += 360
-                    self.updateWeather()
+                    Task {
+                        do {
+                            self.weather = try await self.weatherLoader.loadWeather()
+                        } catch {
+                            print(error)
+                            self.weather = "?"
+                        }
+                    }
                 }, label: {
                     Image(Constants.updateWeatherImageName)
                         .rotationEffect(.degrees(self.degrees))
@@ -75,13 +82,14 @@ struct WeatherContentView: View {
             }
         }
         .onAppear(perform: {
-            self.updateWeather()
-        })
-    }
-    
-    private func updateWeather() {
-        self.weatherLoader.loadData(completion: { weather in
-            self.weather = weather
+            Task {
+                do {
+                    self.weather = try await self.weatherLoader.loadWeather()
+                } catch {
+                    print(error)
+                    self.weather = "?"
+                }
+            }
         })
     }
 }

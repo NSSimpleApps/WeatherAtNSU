@@ -20,8 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let nsuLabel = Constants.nsuLabel
         let inpLabel = Constants.inpLabel
 
-        let weatherAtNSUContentView = WeatherContentView(weatherLoader: WeatherLoader.nsu, location: nsuLabel, image: Constants.nsuImageName)
-        let weatherAtINPContentView = WeatherContentView(weatherLoader: WeatherLoader.inp, location: inpLabel, image: Constants.inpImageName)
+        let weatherAtNSUContentView = WeatherContentView(weatherLoader: .init(url: WeatherLoader.nsuURL, pattern: WeatherLoader.nsuPattern),
+                                                         location: nsuLabel, image: Constants.nsuImageName)
+        let weatherAtINPContentView = WeatherContentView(weatherLoader: .init(url: WeatherLoader.inpURL, pattern: WeatherLoader.inpPattern),
+                                                         location: inpLabel, image: Constants.inpImageName)
 
         let tabView = TabView {
             weatherAtNSUContentView

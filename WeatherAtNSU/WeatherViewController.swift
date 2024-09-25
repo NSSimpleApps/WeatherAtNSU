@@ -120,7 +120,7 @@ class WeatherViewController: UIViewController {
         updateWeatherButton.widthAnchor.constraint(equalToConstant: updateWeatherButtonSize).isActive = true
         updateWeatherButton.heightAnchor.constraint(equalToConstant: updateWeatherButtonSize).isActive = true
         
-        self.weatherLoader.loadData(completion: { weather in
+        self.weatherLoader.loadWeather(completion: { weather in
             DispatchQueue.main.async {
                 temperatureLabel.text = weather
             }
@@ -151,7 +151,7 @@ class WeatherViewController: UIViewController {
         sender.isEnabled = false
         sender.layer.add(rotationAnimation, forKey: "rotationAnimation")
         
-        self.weatherLoader.loadData { weather in
+        self.weatherLoader.loadWeather { weather in
             DispatchQueue.main.async {
                 sender.isEnabled = true
                 temperatureLabel.text = weather

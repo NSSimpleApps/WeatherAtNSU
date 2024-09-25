@@ -11,7 +11,7 @@ import Intents
 
 
 struct Provider: TimelineProvider {
-    private let weatherLoader = WeatherLoader.nsu
+    private let weatherLoader = WeatherLoader(url: WeatherLoader.nsuURL, pattern: WeatherLoader.nsuPattern)
     
     typealias Entry = WeatherEntry
     
@@ -19,14 +19,14 @@ struct Provider: TimelineProvider {
         return WeatherEntry(date: Date(), weather: Weather(id: 0, weather: "?"))
     }
     
-    func getSnapshot(in context: Context, completion: @escaping (WeatherEntry) -> Void) {
-        self.weatherLoader.loadData { weather in
+    func getSnapshot(in context: Context, completion: @escaping @Sendable (WeatherEntry) -> Void) {
+        self.weatherLoader.loadWeather { weather in
             completion(WeatherEntry(date: Date(), weather: Weather(id: 0, weather: weather)))
         }
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<WeatherEntry>) -> Void) {
-        self.weatherLoader.loadData { weather in
+    func getTimeline(in context: Context, completion: @escaping @Sendable (Timeline<WeatherEntry>) -> Void) {
+        self.weatherLoader.loadWeather { weather in
             let timeline = Timeline(entries: [WeatherEntry(date: Date(), weather: Weather(id: 0, weather: weather))], policy: .atEnd)
             completion(timeline)
         }

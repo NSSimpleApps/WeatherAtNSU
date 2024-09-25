@@ -17,10 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let nsuLabel = Constants.nsuLabel
             let inpLabel = Constants.inpLabel
             
-            let weatherAtNSUViewController = WeatherViewController(weatherLoader: WeatherLoader.nsu,
+            let weatherAtNSUViewController = WeatherViewController(weatherLoader: .init(url: WeatherLoader.nsuURL,
+                                                                                        pattern: WeatherLoader.nsuPattern),
                                                                    location: nsuLabel, image: Constants.nsuImageName)
             weatherAtNSUViewController.tabBarItem = UITabBarItem(title: nsuLabel, image: nil, tag: 0)
-            let weatherAtINPViewController = WeatherViewController(weatherLoader: WeatherLoader.inp,
+            let weatherAtINPViewController = WeatherViewController(weatherLoader: .init(url: WeatherLoader.inpURL,
+                                                                                        pattern: WeatherLoader.inpPattern),
                                                                    location: inpLabel, image: Constants.inpImageName)
             weatherAtINPViewController.tabBarItem = UITabBarItem(title: inpLabel, image: nil, tag: 1)
             
