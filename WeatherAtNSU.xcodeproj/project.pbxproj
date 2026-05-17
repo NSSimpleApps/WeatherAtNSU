@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 100;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,14 +38,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		CE28A9F5267A3AA900E17C83 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				CE28A9F4267A3AA900E17C83 /* WeatherAtNSUExtensionExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -74,19 +72,15 @@
 /* Begin PBXFrameworksBuildPhase section */
 		CE28A9E0267A3AA800E17C83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				CE28A9E8267A3AA800E17C83 /* SwiftUI.framework in Frameworks */,
 				CE28A9E6267A3AA800E17C83 /* WidgetKit.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE6F39652678E12D00F32C4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -161,8 +155,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = WeatherAtNSUExtensionExtension;
 			productName = WeatherAtNSUExtensionExtension;
 			productReference = CE28A9E3267A3AA800E17C83 /* WeatherAtNSUExtensionExtension.appex */;
@@ -195,7 +187,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					CE28A9E2267A3AA800E17C83 = {
 						CreatedOnToolsVersion = 12.5;
@@ -213,7 +205,7 @@
 				Base,
 			);
 			mainGroup = CE6F395F2678E12D00F32C4D;
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 100;
 			productRefGroup = CE6F39692678E12D00F32C4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,37 +219,30 @@
 /* Begin PBXResourcesBuildPhase section */
 		CE28A9E1267A3AA800E17C83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				CE28A9EE267A3AA900E17C83 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE6F39662678E12D00F32C4D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				CE6F39782678E12F00F32C4D /* LaunchScreen.storyboard in Resources */,
 				CE6F39752678E12F00F32C4D /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE28A9DF267A3AA800E17C83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				CE28A9EB267A3AA800E17C83 /* WeatherAtNSUExtension.swift in Sources */,
 				CE28A9FA267A454000E17C83 /* WeatherLoader.swift in Sources */,
 				CE28A9F0267A3AA900E17C83 /* WeatherAtNSUExtension.intentdefinition in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE6F39642678E12D00F32C4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				CE6F39702678E12D00F32C4D /* WeatherViewController.swift in Sources */,
 				CE6F39802678E24E00F32C4D /* WeatherContentView.swift in Sources */,
@@ -267,7 +252,6 @@
 				CE6F396E2678E12D00F32C4D /* SceneDelegate.swift in Sources */,
 				CE6F39862679168B00F32C4D /* Constants.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -291,15 +275,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CE28A9F6267A3AA900E17C83 /* Debug */ = {
+		CE28A9F6267A3AA900E17C83 /* Debug configuration for PBXNativeTarget "WeatherAtNSUExtensionExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGK94DY85S;
 				INFOPLIST_FILE = WeatherAtNSUExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,15 +294,13 @@
 			};
 			name = Debug;
 		};
-		CE28A9F7267A3AA900E17C83 /* Release */ = {
+		CE28A9F7267A3AA900E17C83 /* Release configuration for PBXNativeTarget "WeatherAtNSUExtensionExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGK94DY85S;
 				INFOPLIST_FILE = WeatherAtNSUExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,7 +313,7 @@
 			};
 			name = Release;
 		};
-		CE6F397A2678E12F00F32C4D /* Debug */ = {
+		CE6F397A2678E12F00F32C4D /* Debug configuration for PBXProject "WeatherAtNSU" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,6 +348,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MGK94DY85S;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -385,18 +366,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
-		CE6F397B2678E12F00F32C4D /* Release */ = {
+		CE6F397B2678E12F00F32C4D /* Release configuration for PBXProject "WeatherAtNSU" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,6 +413,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MGK94DY85S;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -442,10 +425,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
@@ -453,14 +437,14 @@
 			};
 			name = Release;
 		};
-		CE6F397D2678E12F00F32C4D /* Debug */ = {
+		CE6F397D2678E12F00F32C4D /* Debug configuration for PBXNativeTarget "WeatherAtNSU" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGK94DY85S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeatherAtNSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,14 +457,14 @@
 			};
 			name = Debug;
 		};
-		CE6F397E2678E12F00F32C4D /* Release */ = {
+		CE6F397E2678E12F00F32C4D /* Release configuration for PBXNativeTarget "WeatherAtNSU" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGK94DY85S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WeatherAtNSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,28 +483,25 @@
 		CE28A9F8267A3AA900E17C83 /* Build configuration list for PBXNativeTarget "WeatherAtNSUExtensionExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE28A9F6267A3AA900E17C83 /* Debug */,
-				CE28A9F7267A3AA900E17C83 /* Release */,
+				CE28A9F6267A3AA900E17C83 /* Debug configuration for PBXNativeTarget "WeatherAtNSUExtensionExtension" */,
+				CE28A9F7267A3AA900E17C83 /* Release configuration for PBXNativeTarget "WeatherAtNSUExtensionExtension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		CE6F39632678E12D00F32C4D /* Build configuration list for PBXProject "WeatherAtNSU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE6F397A2678E12F00F32C4D /* Debug */,
-				CE6F397B2678E12F00F32C4D /* Release */,
+				CE6F397A2678E12F00F32C4D /* Debug configuration for PBXProject "WeatherAtNSU" */,
+				CE6F397B2678E12F00F32C4D /* Release configuration for PBXProject "WeatherAtNSU" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		CE6F397C2678E12F00F32C4D /* Build configuration list for PBXNativeTarget "WeatherAtNSU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE6F397D2678E12F00F32C4D /* Debug */,
-				CE6F397E2678E12F00F32C4D /* Release */,
+				CE6F397D2678E12F00F32C4D /* Debug configuration for PBXNativeTarget "WeatherAtNSU" */,
+				CE6F397E2678E12F00F32C4D /* Release configuration for PBXNativeTarget "WeatherAtNSU" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
